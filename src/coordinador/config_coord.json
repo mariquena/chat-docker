@@ -1,0 +1,26 @@
+{
+  "puertoClientes": "3000",
+  "datosBroker": [
+    {
+      "idBroker": "BROKER_1",
+      "ipBroker": "127.0.0.1",
+      "puertoPub": "3031",
+      "puertoSub": "3021",
+      "puertoRep": "3041"
+    },
+    {
+      "idBroker": "BROKER_2",
+      "ipBroker": "127.0.0.1",
+      "puertoPub": "3032",
+      "puertoSub": "3022",
+      "puertoRep": "3042"
+    },
+    {
+      "idBroker": "BROKER_3",
+      "ipBroker": "127.0.0.1",
+      "puertoPub": "3033",
+      "puertoSub": "3023",
+      "puertoRep": "3043"
+    }
+  ]
+}

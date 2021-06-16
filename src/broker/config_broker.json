@@ -1,0 +1,15 @@
+{
+  "puertoREP": "3041",
+  "puertoPUB": "3031",
+  "puertoSUB": "3021",
+  "ipNTP": "127.0.0.1",
+  "puertoNTP": "2000",
+  "periodoReloj": 7000,
+  "periodoCola": 4000,
+  "plazoMaxCola": 10000,
+  "tamMaxCola": 50,
+  "plazoMaxHeart": 30000,
+  "periodoListaHeart": 10000,
+  "ipCoord": "127.0.0.1",
+  "puertoCoord": "3000"
+}
