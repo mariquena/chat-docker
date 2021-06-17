@@ -1,0 +1,53 @@
+version: "3.8"
+services:
+    broker-1:
+        build: ./broker
+        environment:
+            - BROKER_ID=BROKER_1
+            - PUERTO_REP=3041
+            - PUERTO_PUB=3031
+            - PUERTO_SUB=3021
+        ports:
+            - '3041:3041'
+            - '3031:3031'
+            - '3021:3021'
+    broker-2:
+        build: ./broker
+        environment:
+            - BROKER_ID=BROKER_2
+            - PUERTO_REP=3042
+            - PUERTO_PUB=3032
+            - PUERTO_SUB=3022
+        ports:
+            - '3042:3042'
+            - '3032:3032'
+            - '3022:3022'
+    broker-3:
+        build: ./broker
+        environment:
+            - BROKER_ID=BROKER_3
+            - PUERTO_REP=3043
+            - PUERTO_PUB=3033
+            - PUERTO_SUB=3023
+        ports:
+            - '3043:3043'
+            - '3033:3033'
+            - '3023:3023'
+    cliente:
+        build: ./cliente
+        environment:
+            - CLIENTE_ID=CLIENTE_1
+    coordinador:
+        build: ./coordinador
+        ports:
+            - '3000:3000'
+    servidor-http:
+        build: ./servidor-http
+        ports:
+            - '5000:5000'
+    servidor-ntp:
+        build: ./servidor-ntp
+        environment:
+            - PUERTO_NTP=2000
+        ports:
+            -'2000:2000'
