@@ -50,4 +50,4 @@ services:
         environment:
             - PUERTO_NTP=2000
         ports:
-            -'2000:2000'
+            - '2000:2000'

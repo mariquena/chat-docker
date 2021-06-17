@@ -4,6 +4,12 @@ const zmq = require('zeromq');
 const ListaConectados = require('./listaConectados.js');
 const configBroker = require('./config_broker.json');
 
+configBroker.puertoREP = process.env.PUERTO_REP;
+configBroker.puertoPUB = process.env.PUERTO_PUB;
+configBroker.puertoSUB = process.env.PUERTO_SUB;
+
+const BROKER_ID = process.env.BROKER_ID;
+
 const TOP_INEXISTENTE = 1, OP_INEXISTENTE = 2; /* CODIGOS DE ERROR */
 const HEARTBEAT = "heartbeat", ALL = "message/all", PREFIJO = "message/"; /* TOPICOS */
 const SUB_ALTA = 2, NUEVO_TOP = 3, MOSTRAR_TOP = 4, MOSTRAR_MSJ = 5, BORRAR_MSJ = 6; /* OPERACIONES */
@@ -13,8 +19,6 @@ const
     pubSocket = zmq.socket('xpub'),
     responder = zmq.socket('rep');
 let socketHB;
-
-const BROKER_ID = process.argv[2];
 let reloj, colaMensajes, listaConectados;
 
 /* INICIO */ 

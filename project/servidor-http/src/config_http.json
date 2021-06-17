@@ -3,17 +3,17 @@
   "datosBroker": [
     {
       "id": "BROKER_1",
-      "ip": "127.0.0.1",
+      "ip": "broker-1",
       "puerto": 3041
     },
     {
       "id": "BROKER_2",
-      "ip": "127.0.0.1",
+      "ip": "broker-2",
       "puerto": 3042
     },
     {
       "id": "BROKER_3",
-      "ip": "127.0.0.1",
+      "ip": "broker-3",
       "puerto": 3043
     }
   ]

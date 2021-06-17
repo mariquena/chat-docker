@@ -8,7 +8,7 @@ const zmq = require('zeromq');
 
 const configCliente = require('./config_cliente.json');
 
-const ID_CLIENTE = process.argv[2];
+const ID_CLIENTE = process.env.CLIENTE_ID;
 
 const FIN = "bye";
 const MOSTRAR_USUARIOS = "showusers";

@@ -1,6 +1,6 @@
 const net = require('net');
 
-const port = process.argv[2]; 
+const port = process.env.PUERTO_NTP; 
 
 const server = net.createServer(function (socket) {
     socket.on('data', function (data) {
