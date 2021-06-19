@@ -1,7 +1,7 @@
 # chat-docker
 > TP2 - Software Libre - 2021 - FI-UNMdP
 
-
+Implementación del TP de Sistemas Distribuidos (sistema de chat en Node y ZeroMQ) con Docker.
 
 ## Alumnos 
   - Mariquena Gros
