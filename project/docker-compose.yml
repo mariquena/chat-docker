@@ -11,6 +11,9 @@ services:
             - '3041:3041'
             - '3031:3031'
             - '3021:3021'
+        depends_on:
+            - coordinador
+            - servidor-ntp
     broker-2:
         build: ./broker
         environment:
@@ -22,6 +25,9 @@ services:
             - '3042:3042'
             - '3032:3032'
             - '3022:3022'
+        depends_on:
+            - coordinador
+            - servidor-ntp
     broker-3:
         build: ./broker
         environment:
@@ -33,18 +39,23 @@ services:
             - '3043:3043'
             - '3033:3033'
             - '3023:3023'
-    cliente:
-        build: ./cliente
-        environment:
-            - CLIENTE_ID=CLIENTE_1
+        depends_on:
+            - coordinador
+            - servidor-ntp
     coordinador:
         build: ./coordinador
         ports:
             - '3000:3000'
+        depends_on:
+            - servidor-ntp
     servidor-http:
         build: ./servidor-http
         ports:
             - '5000:5000'
+        depends_on:
+            - broker-1
+            - broker-2
+            - broker-3
     servidor-ntp:
         build: ./servidor-ntp
         environment:
